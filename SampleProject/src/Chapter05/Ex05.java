@@ -23,10 +23,10 @@ class Point{
 	
 }
  
-class ColorPoint extends Point{
+class ColorPoint02 extends Point{
 	private String Color;
 	
-	public ColorPoint(int x, int y, String Color) {
+	public ColorPoint02(int x, int y, String Color) {
 		super(x,y);
 		this.Color = Color;
 	}
@@ -44,7 +44,7 @@ class ColorPoint extends Point{
 	}
 	@Override
 	public String toString() {
-		return Color+"색의 ("+getX()+","+getY()+")의 점";
+		return Color+"색의 ("+getX()+","+getY()+")의 점입니다.";
 	}
 	
 }
@@ -52,7 +52,7 @@ class ColorPoint extends Point{
 public class Ex05 {
 
 	public static void main(String[] args) {
-		ColorPoint cp = new ColorPoint(5, 5, "YELLOW");
+		ColorPoint02 cp = new ColorPoint02(5, 5, "YELLOW");
 		cp.setXY(10, 20);
 		cp.setColor("RED");
 		String str = cp.toString();

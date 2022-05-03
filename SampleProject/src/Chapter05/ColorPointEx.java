@@ -1,7 +1,7 @@
-package chapter04;
+package Chapter05;
 
 //1. Point 클래스 작성 : 좌표 표현
-class Point{
+class Point02{
 	int x, y;
 	void set(int x, int y){
 		this.x = x;
@@ -13,7 +13,7 @@ class Point{
 	
 }
 //2. Point를 상속받아서 ColorPoint 클래스 작성
-class ColorPoint extends Point{
+class ColorPoint extends Point02{
 	String color;
 	void setColor(String color){this.color = color;}
 	void showColorPoint(){
@@ -26,7 +26,7 @@ public class ColorPointEx {
 
 	public static void main(String[] args) {
 	    //3.1 Point 객체를 생성한다.
-		Point p = new Point();
+		Point02 p = new Point02();
 		//3.2 Point 객체에 죄표를 세팅한다.
 		p.set(1, 2);		
 		//3.3 Point 객체에 좌표를 출력한다.

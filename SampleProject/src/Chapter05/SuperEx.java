@@ -1,12 +1,12 @@
-package chapter04;
+package Chapter05;
 
-class Point{
+class Pointz{
 	private int x, y; //한 점을 구성하는 x, y좌표
-	public Point() {
+	public Pointz() {
 		this.x = this.y = 0;
 	}
 
-    public Point(int x, int y) {
+    public Pointz(int x, int y) {
     	this.x = x; this.y = y;
     }
     public void showPoint() { //점의 좌표 출력
@@ -14,9 +14,9 @@ class Point{
     }
  }
  
- class ColorPoint extends Point{
+ class ColorPointz extends Pointz{
 	 private String color; //점의 색
-	 public ColorPoint(int x, int y, String color) {
+	 public ColorPointz(int x, int y, String color) {
 		 super(x,y); //Point의 생성자 Point(x, y)호출
 		 this.color = color;
 	 }
@@ -29,7 +29,7 @@ class Point{
 public class SuperEx {
 
 	public static void main(String[] args) {
-		ColorPoint cp = new ColorPoint(5, 6, "blue");
+		ColorPointz cp = new ColorPointz(5, 6, "blue");
 		cp.showColorPoint();
 
 	}
