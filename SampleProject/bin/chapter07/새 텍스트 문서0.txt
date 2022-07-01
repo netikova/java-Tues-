@@ -1,0 +1,64 @@
+package chapter07;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+class Student{
+	String name;
+	String sub;
+	int id;
+	double avg;
+	Student(String name, String sub, int id, double avg){
+		this.name = name;
+		this.sub = sub;
+		this.id = id;
+		this.avg = avg;
+	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", sub=" + sub + ", id=" + id + ", avg=" + avg + "]";
+	}
+	
+}
+
+public class Ex07_05{
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		ArrayList<Student> al = new ArrayList<>();
+		
+		for(int i=0; i<4; i++){
+			System.out.println("학생 이름, 학과, 학번, 학점평균 입력하세요.");
+			String query = scan.next();
+			
+		}
+		
+		StringTokenizer st = new StringTokenizer(query, ",");
+		
+		while(st.hasMoreTokens()) {
+			 String name = st.nextToken().trim();
+			 System.out.println("이름:" + name);
+			 String sub = st.nextToken().trim();
+			 System.out.println("학과:" + sub);
+			 int id = Integer.parseInt(st.nextToken().trim());
+			 System.out.println("학번:" + id);
+			 double avg = Integer.parseInt(st.nextToken().trim());
+			 System.out.println("avg:" + avg);
+			 Student student = new Student(name,sub,id,avg);
+			 al.add(student);				 
+		}
+		for(int i=0; i <al.size(); i++) {
+			Student s = al.get(i);
+			
+			System.out.println("이름: " + s.name);
+			System.out.println("학과: " + s.sub);
+			System.out.println("학번: " + s.id);
+			System.out.println("평균: " + s.avg);
+		}
+		
+		
+
+	}
+
+}

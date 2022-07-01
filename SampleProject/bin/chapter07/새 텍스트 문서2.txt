@@ -1,0 +1,67 @@
+package chapter07;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+class Student{
+	private String name;
+	private String sub;
+	private int id;
+	private double avg;
+	public void student(String name,String sub,int id,double avg) {
+	this.name = name;
+	this.sub = sub;
+	this.id = id;
+	this.avg = avg;
+	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", sub=" + sub + ", id=" + id + ", avg=" + avg + "]";
+	}
+	
+}
+
+
+
+public class Ex07_05 {
+	public static void search(ArrayList<Student> al, String name) {
+		for(Student a : al)
+			System.out.println(a);
+		/* if(al.equals(a)) */
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		StringTokenizer st;
+		Student student;
+		ArrayList<String> al = new ArrayList<>();
+		
+		System.out.println("학생이름, 학과, 학번, 학점평균을 입력하세요 : ");
+		for(int i =0; i<4; i++) {
+			System.out.println(">>");
+			String query = scan.next();
+			st = new StringTokenizer(query, ",");
+			while(st.hasMoreTokens()) {
+				String name = st.nextToken().trim();
+				System.out.println("이름: " + name);
+				String sub = st.nextToken().trim();
+				System.out.println("학과: " + sub);
+				int id = Integer.parseInt("학번: " + st.nextToken().trim());
+				System.out.println(id);
+				double avg = Double.parseDouble(st.nextToken().trim());
+				System.out.println("학점평균: " + avg);
+				student = new Student(name,sub,id,avg);
+				al.add(student);
+			}
+		}
+		for(Student s: al)
+			System.out.println(s);
+		
+		System.out.println("--------------------------------------");
+		System.out.println("학생이름 >> ");
+		String key_name = scan.next().trim();
+		search(al,keyname);
+	}
+
+}
