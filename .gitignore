@@ -1,0 +1,5 @@
+
+*.class
+*.prefs
+SampleProject/.classpath
+SampleProject/.settings/org.eclipse.jdt.core.prefs
